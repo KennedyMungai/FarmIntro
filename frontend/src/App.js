@@ -21,6 +21,7 @@ function App()
         <div>
           {/* Todo items */}
         </div>
+        <h6 className="card text-dark bg-warning py-1 mb-0 fixed-bottom">Copyright 2022, All Rights Reserved &copy;</h6>
       </div>
     </div >
   );
