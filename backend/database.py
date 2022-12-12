@@ -6,3 +6,5 @@ import motor.motor_asyncio
 
 
 client = motor.motor_async_io.AsyncIOMotorClient('mongodb://localhost:27017')
+
+database = client.TodoList
