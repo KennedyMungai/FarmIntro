@@ -25,3 +25,10 @@ async def fetch_all_todos():
         todos.append(Todo(**document))
 
     return todos
+
+
+async def create_todo(todo: Todo):
+    document = todo
+    result = await collection.insert_one(document)
+
+    return document
