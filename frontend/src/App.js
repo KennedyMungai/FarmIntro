@@ -17,9 +17,10 @@ function App()
         <span className="card-text">
           <input type="text" className="mb-2 form-control titleIn" placeholder='Title' />
           <input type="text" className="mb-2 form-control desIn" placeholder='Description' />
+          <button className="btn btn-outline-primary mx-2" style={{ 'border-radius': '50px', 'font-weight': 'bold' }}>Add Task</button>
         </span>
       </div>
-    </div>
+    </div >
   );
 }
 
