@@ -11,3 +11,5 @@ const TodoView = (props) =>
         </div>
     )
 }
+
+export default TodoView
