@@ -48,7 +48,14 @@ function App()
             onChange={event => setDesc(event.target.value)}
           />
 
-          <button className="btn btn-outline-primary mx-2" style={{ 'border-radius': '50px', 'font-weight': 'bold' }}>Add Task</button>
+          <button
+            className="btn btn-outline-primary mx-2"
+            style={{ 'border-radius': '50px', 'font-weight': 'bold' }}
+            onClick={addTodoHandler}
+          >
+            Add Task
+          </button>
+
         </span>
         <h5 className="card text-white bg-dark my-3"> Your Tasks</h5>
         <div>
