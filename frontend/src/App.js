@@ -8,8 +8,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 function App()
 {
   return (
-    <div className="App">
-      Hello World
+    <div className="App list-group-item justify-content-center align-items-center mx-auto">
+
     </div>
   );
 }
