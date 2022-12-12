@@ -34,7 +34,12 @@ function App()
       <div className="card-body">
         <div className="card text-white bg-dark mb-3">Add your tasks</div>
         <span className="card-text">
-          <input type="text" className="mb-2 form-control titleIn" placeholder='Title' />
+          <input
+            type="text"
+            className="mb-2 form-control titleIn"
+            placeholder='Title'
+            onChange={event => setTitle(event.target.value)}
+          />
           <input type="text" className="mb-2 form-control desIn" placeholder='Description' />
           <button className="btn btn-outline-primary mx-2" style={{ 'border-radius': '50px', 'font-weight': 'bold' }}>Add Task</button>
         </span>
