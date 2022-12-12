@@ -19,6 +19,13 @@ function App()
       })
   }, [])
 
+  // Adding a todo
+  const addTodoHandler = () =>
+  {
+    axios.post('http://localhost:8000/api/todo/', { 'title': title, 'description': desc })
+      .then(res => console.log(res))
+  }
+
 
   return (
     <div className="App list-group-item justify-content-center align-items-center mx-auto" style={{ "width": "400px", "background-color": "white", "margin-top": "15px" }}>
