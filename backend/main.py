@@ -1,4 +1,4 @@
-from database import ()
+from database import Todo
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -47,7 +47,7 @@ async def get_todo_by_title(title):
     raise HTTPException(404, "The TODO item of title {title} does not exist")
 
 
-@app.post("/api/todo")
+@app.post("/api/todo", response_model=Todo)
 async def post_todo(todo):
     return 1
 
