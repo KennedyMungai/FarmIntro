@@ -24,3 +24,8 @@ def read_root():
 @app.get("/api/todo")
 async def get_todo():
     return 1
+
+
+@app.get("/api/todo/{id}")
+async def get_todo_by_id(id: int):
+    return 1
