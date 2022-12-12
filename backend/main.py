@@ -36,7 +36,7 @@ async def post_todo(todo):
     return 1
 
 
-@app.update("/api/todo")
+@app.update("/api/todo{id}")
 async def put_todo(id, data):
     return 1
 
