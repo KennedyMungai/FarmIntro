@@ -1,6 +1,6 @@
 from database import Todo
 from fastapi import FastAPI, HTTPException
-from fastapi.mtitledleware.cors import CORSMtitledleware
+from fastapi.middleware.cors import CORSMiddleware
 
 from database import (
     fetch_one_todo,
@@ -16,8 +16,8 @@ app = FastAPI()
 
 origins = ['https://localhost:3000']
 
-app.add_mtitledleware(
-    CORSMtitledleware,
+app.add_middleware(
+    CORSMiddleware,
     allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
