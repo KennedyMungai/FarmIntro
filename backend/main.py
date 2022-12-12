@@ -19,3 +19,8 @@ app.add_middleware(
 @app.get("/")
 def read_root():
     return {"Ping": "Pong"}
+
+
+@app.get("/api/todo")
+async def get_todo():
+    return 1
