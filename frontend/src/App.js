@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App()
 {
-  const [todoList, setTodoList] = useState('')
+  const [todoList, setTodoList] = useState([{}])
   const [title, setTitle] = useState('')
   const [desc, setDesc] = useState('')
 
