@@ -41,7 +41,10 @@ async def get_todo():
 async def get_todo_by_title(title):
     response = fetch_one_todo(title)
 
-    return response
+    if response:
+        return response
+
+    raise HTTPException(404, "The TODO item of title {title} does not exist")
 
 
 @app.post("/api/todo")
