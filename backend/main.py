@@ -34,3 +34,8 @@ async def get_todo_by_id(id: int):
 @app.post("/api/todo")
 async def post_todo(todo):
     return 1
+
+
+@app.update("/api/todo")
+async def put_todo(id, data):
+    return 1
