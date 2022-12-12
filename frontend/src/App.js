@@ -10,6 +10,16 @@ function App()
   const [title, setTitle] = useState('')
   const [desc, setDesc] = useState('')
 
+  useEffect(() =>
+  {
+    axios.get('http://localhost:8000/api/todo')
+      .then(res =>
+      {
+        setTodoList(res.data)
+      })
+  }, [])
+
+
   return (
     <div className="App list-group-item justify-content-center align-items-center mx-auto" style={{ "width": "400px", "background-color": "white", "margin-top": "15px" }}>
       <h1 className="card text-white bg-primary mb-1" styleName="max-width: 20rem;">Task Manager</h1>
