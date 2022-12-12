@@ -40,7 +40,14 @@ function App()
             placeholder='Title'
             onChange={event => setTitle(event.target.value)}
           />
-          <input type="text" className="mb-2 form-control desIn" placeholder='Description' />
+
+          <input
+            type="text"
+            className="mb-2 form-control desIn"
+            placeholder='Description'
+            onChange={event => setDesc(event.target.value)}
+          />
+
           <button className="btn btn-outline-primary mx-2" style={{ 'border-radius': '50px', 'font-weight': 'bold' }}>Add Task</button>
         </span>
         <h5 className="card text-white bg-dark my-3"> Your Tasks</h5>
