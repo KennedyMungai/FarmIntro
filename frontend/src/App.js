@@ -12,6 +12,9 @@ function App()
       style={{ "width": "400px", "background-color": "white", "margin-top": "15px" }}>
       <h1 className="card text-white bg-primary mb-1" styleName="max-width: 20rem;">Task Manager</h1>
       <h6 className="card text-white bg-primary mb-3">FASTAPI - React - MongoDB</h6>
+      <div className="card-body">
+        <div className="card text-white bg-dark mb-3">Add your tasks</div>
+      </div>
     </div>
   );
 }
