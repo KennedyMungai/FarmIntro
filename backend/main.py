@@ -37,9 +37,11 @@ async def get_todo():
     return response
 
 
-@app.get("/api/todo/{id}")
-async def get_todo_by_id(id: int):
-    return 1
+@app.get("/api/todo/{title}", response_model=Todo)
+async def get_todo_by_title(title):
+    response = fetch_one_todo(title)
+
+    return response
 
 
 @app.post("/api/todo")
