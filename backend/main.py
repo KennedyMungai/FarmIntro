@@ -1,6 +1,6 @@
 from database import Todo
 from fastapi import FastAPI, HTTPException
-from fastapi.middleware.cors import CORSMiddleware
+from fastapi.mtitledleware.cors import CORSMtitledleware
 
 from database import (
     fetch_one_todo,
@@ -16,8 +16,8 @@ app = FastAPI()
 
 origins = ['https://localhost:3000']
 
-app.add_middleware(
-    CORSMiddleware,
+app.add_mtitledleware(
+    CORSMtitledleware,
     allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
@@ -57,11 +57,16 @@ async def post_todo(todo: Todo):
     raise HTTPException(400, "Something went wrong")
 
 
-@app.put("/api/todo{id}")
-async def put_todo(id, data):
-    return 1
+@app.put("/api/todo{title}", response_model=Todo)
+async def put_todo(title: str, desc: str):
+    response = await update_todo(title, desc)
+
+    if response:
+        return response
+
+    raise HTTPException(404, f"There is no TODO item with this title")
 
 
-@app.delete("/api/todo{id}")
-async def delete_todo(id):
+@app.delete("/api/todo{title}")
+async def delete_todo(title):
     return 1
