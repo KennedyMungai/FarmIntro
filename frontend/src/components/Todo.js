@@ -2,7 +2,7 @@ import axios from 'axios'
 import React from 'react'
 
 
-function TodoItem(props)
+const TodoItem = (props) =>
 {
     const deleteTodoHandler = (title) => 
     {
