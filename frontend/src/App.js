@@ -12,7 +12,8 @@ function App()
           {
             "width": "400px",
             "backgroundColor": "white",
-            "marginTop": "15px"
+            "marginTop": "15px",
+            "textAlign": "center"
           }
         }
       >
@@ -20,13 +21,13 @@ function App()
           className="cart text-white bg-primary mb"
           style={
             {
-              "maxWidth": "20rem",
               "padding": "1rem"
             }
           }
         >
           Task Manager
         </h1>
+        <h6 className="card text-white bg-primary mb-3">FARM boi!</h6>
       </div>
     </div>
   );
