@@ -49,6 +49,7 @@ function App()
         </h5>
         <span className="cart-text">
           <input type="text" className="mb-2 form-control titleIn" placeholder='Title' />
+          <input type="text" className="mb-2 form-control desIn" placeholder='Description' />
         </span>
       </div>
     </div>
