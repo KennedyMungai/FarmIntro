@@ -3,3 +3,5 @@ from fastapi.middleware.cors import CORSMiddleware
 
 # App Object
 app = FastAPI()
+
+origins =['https://localhost:3000']
