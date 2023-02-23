@@ -54,7 +54,6 @@ function App()
             className="btn btn-outline-primary mx-2"
             style={
               {
-                'fontWeight': 'bold',
                 'padding': '0.5rem'
               }
             }
