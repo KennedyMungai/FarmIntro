@@ -4,7 +4,14 @@ import Todo from './Todo'
 const Todos = (props) =>
 {
     return (
-        <div>Todos</div>
+        <div>
+            <ul>
+                {props.todoList.map((todo) =>
+                {
+                    <Todo todo={todo} />
+                })}
+            </ul>
+        </div>
     )
 }
 
