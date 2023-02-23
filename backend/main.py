@@ -67,7 +67,7 @@ async def get_todo_by_id(title):
 
 
 @app.post('/api/todo', response_model=Todo)
-async def post_todo(todo):
+async def post_todo(todo: Todo):
     """A simple endpoint for posting todos
 
     Args:
