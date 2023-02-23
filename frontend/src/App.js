@@ -26,7 +26,16 @@ function App()
       >
         Task Manager
       </h1>
-      <h6 className="card text-white bg-primary mb-3">FARM boi!</h6>
+      <h6
+        className="card text-white bg-primary mb-3"
+        style={
+          {
+            "padding": "0.5rem"
+          }
+        }
+      >
+        FARM boi!
+      </h6>
     </div>
   );
 }
