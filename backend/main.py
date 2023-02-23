@@ -95,7 +95,12 @@ async def put_todo(title: str, description: str):
     Returns:
         1: A number for testing purposes
     """
-    return 1
+    response = await update_todo(title, description)
+
+    if response:
+        return response
+    else:
+        raise HTTPException(404, f"There is no TODO item with this title")
 
 
 @app.delete('/api/todo{title}')
