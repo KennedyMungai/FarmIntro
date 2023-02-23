@@ -62,7 +62,8 @@ async def get_todo_by_id(title):
     if response:
         return response
     else:
-        raise HTTPException(404, "There is no Todo item with this title")
+        raise HTTPException(
+            404, f"There is no Todo item with this title {title}")
 
 
 @app.post('/api/todo')
