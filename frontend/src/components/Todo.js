@@ -28,6 +28,7 @@ const Todo = (props) =>
                             borderRadius: '50px'
                         }
                     }
+                    onClick={() => deleteTodoHandler(props.todo.title)}
                 >
                     X
                 </button>
