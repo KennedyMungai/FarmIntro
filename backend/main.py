@@ -1,8 +1,16 @@
+from database import (
+    create_todo,
+    fetch_one_todo,
+    fetch_all_todos,
+    update_todo,
+    delete_todo
+)
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 
 # App Object
 app = FastAPI()
+
 
 origins = ['https://localhost:3000']
 
