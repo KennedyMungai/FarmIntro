@@ -2,6 +2,8 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios'
 
+let year = new Date().getFullYear().toString()
+
 function App()
 {
   return (
@@ -64,6 +66,9 @@ function App()
           {/* Todo items from an external component */}
         </div>
       </div>
+      <h6 className="card text-dark py-1 mb-0">
+        Copyright {year}, All rights reserved &copy;
+      </h6>
     </div>
   );
 }
