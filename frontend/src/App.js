@@ -6,7 +6,28 @@ function App()
 {
   return (
     <div className="App">
-      <h1 className="h1">Todo App</h1>
+      <div
+        className="list-group-item justify-content-center align-items-center mx-auto"
+        style={
+          {
+            "width": "400px",
+            "backgroundColor": "white",
+            "marginTop": "15px"
+          }
+        }
+      >
+        <h1
+          className="cart text-white bg-primary mb"
+          style={
+            {
+              "maxWidth": "20rem",
+              "padding": "1rem"
+            }
+          }
+        >
+          Task Manager
+        </h1>
+      </div>
     </div>
   );
 }
