@@ -36,6 +36,18 @@ function App()
       >
         FARM boi!
       </h6>
+      <div className="card-body">
+        <h5
+          className="cart text-white bg-dark mb-3"
+          style={
+            {
+              "padding": "1rem"
+            }
+          }
+        >
+          Add your task
+        </h5>
+      </div>
     </div>
   );
 }
