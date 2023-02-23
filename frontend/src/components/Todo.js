@@ -10,7 +10,30 @@ const Todo = (props) =>
     }
 
     return (
-        <div>Todo</div>
+        <div>
+            <p>
+                <span
+                    style={
+                        {
+                            fontWeight: 'bold, underline',
+                        }
+                    }>
+                    {props.todo.title} :
+                </span>
+                {props.todo.description}
+                <button
+                    className="btn btn-outline-danger m-2"
+                    style={
+                        {
+                            borderRadius: '50px'
+                        }
+                    }
+                >
+                    X
+                </button>
+                <hr />
+            </p>
+        </div>
     )
 }
 
