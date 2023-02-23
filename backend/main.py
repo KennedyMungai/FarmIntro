@@ -55,8 +55,8 @@ async def get_todo_by_id(title):
     Returns:
         1: A simple number
     """
-    return 1
-
+    response = await fetch_one_todo(title)
+    return response
 
 @app.post('/api/todo')
 async def post_todo(todo):
