@@ -30,3 +30,14 @@ async def fetch_all_todos():
         todos.append(Todo(**document))
 
     return todos
+
+
+async def create_todo(todo):
+    """A function that writes a todo object on the database
+
+    Args:
+        todo (Todo): The item being written onto the database
+    """
+    document = todo
+    result = await collection.insert_one(document)
+    return document
