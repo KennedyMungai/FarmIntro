@@ -98,8 +98,8 @@ async def put_todo(title, data):
     return 1
 
 
-@app.delete('/api/todo{id}')
-async def delete_todo(id):
+@app.delete('/api/todo{title}')
+async def delete_todo(title):
     """A simple endpoint intended for deleting todos
 
     Args:
