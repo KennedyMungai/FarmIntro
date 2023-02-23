@@ -47,7 +47,7 @@ async def get_todo():
         return response
 
 
-@app.get('/api/todo{title}', response_model=Todo)
+@app.get('/api/todo/{title}', response_model=Todo)
 async def get_todo_by_id(title):
     """An endpoint for retrieving individual todos by their id
 
@@ -84,7 +84,7 @@ async def post_todo(todo: Todo):
         raise HTTPException(400, "Something went wrong / Bad request")
 
 
-@app.put('/api/todo{title}', response_model=Todo)
+@app.put('/api/todo/{title}', response_model=Todo)
 async def put_todo(title: str, description: str):
     """An endpoint for updating the todos
 
@@ -104,7 +104,7 @@ async def put_todo(title: str, description: str):
             404, f"There is no TODO item with this title {title}")
 
 
-@app.delete('/api/todo{title}', response_model=Todo)
+@app.delete('/api/todo/{title}', response_model=Todo)
 async def _delete_todo(title: str):
     """A simple endpoint intended for deleting todos
 
