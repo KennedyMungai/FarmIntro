@@ -66,7 +66,7 @@ async def get_todo_by_id(title):
             404, f"There is no Todo item with this title {title}")
 
 
-@app.post('/api/todo')
+@app.post('/api/todo', response_model=Todo)
 async def post_todo(todo):
     """A simple endpoint for posting todos
 
