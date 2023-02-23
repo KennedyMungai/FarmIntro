@@ -5,7 +5,7 @@ const Todo = (props) =>
 {
     const deleteTodoHandler = (todo) =>
     {
-        axios.delete(`http://localhost:800/api/todo/${title}`)
+        axios.delete(`http://localhost:800/api/todo/${props.todo.title}`)
             .then((res) => console.log(res.data))
     }
 
