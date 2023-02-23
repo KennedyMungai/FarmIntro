@@ -6,6 +6,10 @@ let year = new Date().getFullYear().toString()
 
 function App()
 {
+  const [todoList, setTodoList] = useState([{}])
+  const [title, setTitle] = useState('')
+  const [description, setDescription] = useState('')
+
   return (
     <div
       className="list-group-item justify-content-center align-items-center mx-auto"
