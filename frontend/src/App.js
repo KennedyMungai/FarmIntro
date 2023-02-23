@@ -101,7 +101,7 @@ function App()
         </span>
         <h5 className="card text-white bg-dark m-3 p-2">Your Tasks</h5>
         <div>
-          {/* Todo items from an external component */}
+          <Todos todoList={todoList} />
         </div>
       </div>
       <h6 className="card text-dark py-1 mb-0">
