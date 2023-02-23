@@ -76,7 +76,12 @@ async def post_todo(todo: Todo):
     Returns:
         1: For testing purposes
     """
-    return 1
+    response = await create_todo(todo)
+
+    if response:
+        return response
+    else:
+        raise HTTPException(400, "Something went wrong")
 
 
 @app.put('/api/todo{id}')
