@@ -40,7 +40,8 @@ async def get_todo():
     Returns:
         1: A number (for testing purposes)
     """
-    return 1
+    response = await fetch_all_todos()
+    return response
 
 
 @app.get('/api/todo{id}')
