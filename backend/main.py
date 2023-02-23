@@ -84,8 +84,8 @@ async def post_todo(todo: Todo):
         raise HTTPException(400, "Something went wrong / Bad request")
 
 
-@app.put('/api/todo{id}')
-async def put_todo(id, data):
+@app.put('/api/todo{title}', response_model=Todo)
+async def put_todo(title, data):
     """An endpoint for updating the todos
 
     Args:
