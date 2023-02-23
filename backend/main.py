@@ -36,5 +36,5 @@ async def post_todo(todo):
 
 
 @app.put('/api/todo{id}')
-async def put_todo(id):
+async def put_todo(id, data):
     return 1
