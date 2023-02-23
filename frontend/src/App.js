@@ -26,6 +26,10 @@ function App()
       'description': description
     })
       .then((res) => console.log(res))
+      .catch((error) =>
+      {
+        console.log(error.message)
+      })
   }
 
   return (
@@ -72,8 +76,18 @@ function App()
           Add your task
         </h5>
         <span className="cart-text">
-          <input type="text" className="mb-2 form-control titleIn" placeholder='Title' />
-          <input type="text" className="mb-2 form-control desIn" placeholder='Description' />
+          <input
+            type="text"
+            className="mb-2 form-control titleIn"
+            placeholder='Title'
+            onChange={(e) => setTitle(e.target.value)}
+          />
+          <input
+            type="text"
+            className="mb-2 form-control desIn"
+            placeholder='Description'
+            onChange={(e) => setDescription(e.target.value)}
+          />
           <button
             className="btn btn-outline-primary mx-2"
             style={
