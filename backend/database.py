@@ -41,3 +41,15 @@ async def create_todo(todo):
     document = todo
     result = await collection.insert_one(document)
     return document
+
+
+async def update_todo(title, description):
+    """A function that updates items on the database
+
+    Args:
+        title (String): Acts as the identifier of teh Todo i=objects
+        description (String): The body of the Todo objects
+    """
+    await collection.update_one({"title": title}, {"$set": {"description": description}})
+    document = await collection.find_one({"title": title})
+    return document
