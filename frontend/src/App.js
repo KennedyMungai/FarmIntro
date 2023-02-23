@@ -10,6 +10,16 @@ function App()
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
 
+  useEffect(() =>
+  {
+    axios.get('http://localhost:8000/api/todo')
+      .then((res) => 
+      {
+        setTodoList(res.data)
+      })
+  }, [])
+
+
   return (
     <div
       className="list-group-item justify-content-center align-items-center mx-auto"
