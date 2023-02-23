@@ -47,6 +47,9 @@ function App()
         >
           Add your task
         </h5>
+        <span className="cart-text">
+          <input type="text" className="mb-2 form-control titleIn" placeholder='Title' />
+        </span>
       </div>
     </div>
   );
