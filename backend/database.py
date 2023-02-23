@@ -53,3 +53,13 @@ async def update_todo(title, description):
     await collection.update_one({"title": title}, {"$set": {"description": description}})
     document = await collection.find_one({"title": title})
     return document
+
+
+async def delete_todo(title):
+    """A function that drops the Todo from the the database
+
+    Args:
+        title (Identifier): Acts as the identifier for the Todo
+    """
+    await collection.delete_one({"title": title})
+    return True
