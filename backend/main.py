@@ -85,7 +85,7 @@ async def post_todo(todo: Todo):
 
 
 @app.put('/api/todo{title}', response_model=Todo)
-async def put_todo(title: str, data: str):
+async def put_todo(title: str, description: str):
     """An endpoint for updating the todos
 
     Args:
