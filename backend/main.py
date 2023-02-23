@@ -26,5 +26,5 @@ async def get_todo():
 
 
 @app.get('/api/todo{id}')
-async def get_todo():
+async def get_todo_by_id(id):
     return 1
