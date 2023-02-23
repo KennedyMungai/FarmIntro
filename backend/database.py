@@ -1,11 +1,11 @@
 from model import Todo
-from apiKeys import apiKey
+from apiKeys import api_key
 
 # MongoDB driver
 import motor.motor_asyncio
 
 
-client = motor.motor_asyncio.AsyncIOMotorClient(apiKey)
+client = motor.motor_asyncio.AsyncIOMotorClient(api_key)
 database = client.TodoList
 collection = database.todo
 
