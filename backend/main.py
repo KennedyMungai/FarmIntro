@@ -100,11 +100,12 @@ async def put_todo(title: str, description: str):
     if response:
         return response
     else:
-        raise HTTPException(404, f"There is no TODO item with this title")
+        raise HTTPException(
+            404, f"There is no TODO item with this title {title}")
 
 
-@app.delete('/api/todo{title}')
-async def delete_todo(title):
+@app.delete('/api/todo{title}', response_model=Todo)
+async def _delete_todo(title: str):
     """A simple endpoint intended for deleting todos
 
     Args:
@@ -113,4 +114,10 @@ async def delete_todo(title):
     Returns:
         1: A simple number for testing purposes
     """
-    return 1
+    response = delete_todo(title)
+
+    if response:
+        return "Successfully deleted the item"
+    else:
+        raise HTTPException(
+            404, f"There is no TODO item with this title {title}")
