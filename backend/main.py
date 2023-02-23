@@ -81,7 +81,7 @@ async def post_todo(todo: Todo):
     if response:
         return response
     else:
-        raise HTTPException(400, "Something went wrong")
+        raise HTTPException(400, "Something went wrong / Bad request")
 
 
 @app.put('/api/todo{id}')
