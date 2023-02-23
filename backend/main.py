@@ -37,7 +37,7 @@ async def get_todo():
 
 @app.get('/api/todo{id}')
 async def get_todo_by_id(id):
-    """An endpint for retrieving individual todos by their id
+    """An endpoint for retrieving individual todos by their id
 
     Args:
         id (identifier): An identifier for individual todos
