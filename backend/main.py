@@ -7,6 +7,7 @@ from database import (
 )
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from model import Todo
 
 # App Object
 app = FastAPI()
@@ -44,8 +45,8 @@ async def get_todo():
     return response
 
 
-@app.get('/api/todo{id}')
-async def get_todo_by_id(id):
+@app.get('/api/todo{title}', response_model=Todo)
+async def get_todo_by_id(title):
     """An endpoint for retrieving individual todos by their id
 
     Args:
