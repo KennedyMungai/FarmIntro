@@ -19,6 +19,14 @@ function App()
       })
   }, [])
 
+  const addTodoHandler = () =>
+  {
+    axios.post('http://localhost:8000/api/todo', {
+      'title': title,
+      'description': description
+    })
+      .then((res) => console.log(res))
+  }
 
   return (
     <div
@@ -73,6 +81,7 @@ function App()
                 'padding': '0.5rem'
               }
             }
+            onClick={addTodoHandler}
           >Add Task</button>
         </span>
         <h5 className="card text-white bg-dark m-3 p-2">Your Tasks</h5>
