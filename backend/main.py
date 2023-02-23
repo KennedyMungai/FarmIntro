@@ -20,6 +20,11 @@ def read_root():
     return {"Ping": "Pong"}
 
 
+@app.get('/api/todo')
+async def get_todo():
+    return 1
+
+
 @app.get('/api/todo{id}')
 async def get_todo():
     return 1
