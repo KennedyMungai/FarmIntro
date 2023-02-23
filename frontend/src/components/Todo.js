@@ -3,9 +3,9 @@ import React from 'react'
 
 const Todo = (props) =>
 {
-    const deleteTodoHandler = (todo) =>
+    const deleteTodoHandler = (title) =>
     {
-        axios.delete(`http://localhost:800/api/todo/${props.todo.title}`)
+        axios.delete(`http://localhost:800/api/todo/${title}`)
             .then((res) => console.log(res.data))
     }
 
