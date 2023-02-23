@@ -42,7 +42,9 @@ async def get_todo():
         1: A number (for testing purposes)
     """
     response = await fetch_all_todos()
-    return response
+
+    if response:
+        return response
 
 
 @app.get('/api/todo{title}', response_model=Todo)
@@ -56,7 +58,10 @@ async def get_todo_by_id(title):
         1: A simple number
     """
     response = await fetch_one_todo(title)
-    return response
+
+    if response:
+        return response
+
 
 @app.post('/api/todo')
 async def post_todo(todo):
