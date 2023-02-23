@@ -33,3 +33,8 @@ async def get_todo_by_id(id):
 @app.post('/api/todo')
 async def post_todo(todo):
     return 1
+
+
+@app.put('/api/todo{id}')
+async def put_todo(id):
+    return 1
